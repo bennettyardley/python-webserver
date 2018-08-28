@@ -1,7 +1,7 @@
 # python-webserver
 
 ## Server.py
-The main web server script. Works by waiting for a SYN packet from a client over port 1234 and responding with a SYN-ACK packet. Once communication has been established an HTTP packet containing HTML is sent to the client and communication is ended by the server with an RST packet.
+The main web server script. Works by waiting for a SYN packet from a client over port 1234 and responding with a SYN-ACK packet. Once communication has been established (3 Way Handshake) an HTTP packet containing HTML is sent to the client and communication is ended by the server with an RST packet.
 
 ## Requirements 
 * [pydivert](https://github.com/ffalcinelli/pydivert)
