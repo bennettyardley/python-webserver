@@ -28,7 +28,7 @@ def sync(packet, localIP):
 
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 s.connect(("8.8.8.8", 80))
- = (s.getsockname()[0])
+localIP = (s.getsockname()[0])
 s.close()
 with pydivert.WinDivert("tcp.DstPort == 1234") as syn:
     for packet in syn:
